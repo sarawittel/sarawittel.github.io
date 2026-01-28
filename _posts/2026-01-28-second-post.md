@@ -4,6 +4,7 @@ title: "My second profesional post in Jekyll"
 date: 2026-01-28
 categories: jekyll
 excerpt: "Personal blog release with Jekyll and GitHub Pages."
+tags: [jekyll, blog, architecture]
 ---
 
 This is my second article using **Markdown**, Jekyll and GitHub Pages.
