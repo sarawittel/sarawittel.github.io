@@ -1,8 +1,9 @@
 title: Sara Moreno · Developer Blog
 description: Personal blog about SAP, cloud and architecture
 url: https://sarawittel.github.io
-
 lang: en
+
+theme: minima
 
 markdown: kramdown
 kramdown:
