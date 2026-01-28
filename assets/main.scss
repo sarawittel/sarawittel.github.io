@@ -276,6 +276,14 @@ a:hover {
   opacity: 0.85;
 }
 
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  border-bottom: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
