@@ -403,7 +403,12 @@ a:active {
   .site-title {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
   }
+
+  .site-title span {
+  white-space: nowrap;
+}
 
 .site-title-link {
   align-items: center;
