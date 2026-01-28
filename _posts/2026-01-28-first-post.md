@@ -1,9 +1,7 @@
 ---
-layout: post
-title: "First post"
+layout: default
+title: "Test direct content"
 date: 2026-01-28
-categories: jekyll
 ---
 
-Aquí va el contenido del post.
-En Markdown normal.
+**THIS SHOULD APPEAR**
