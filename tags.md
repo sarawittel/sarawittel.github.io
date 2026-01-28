@@ -14,10 +14,12 @@ permalink: /tags/
     {% assign posts = tag[1] %}
 
     <details class="tag-group">
-      <summary>
-        <span>{{ tag_name }}</span>
-        <span class="tag-count">{{ posts | size }}</span>
-      </summary>
+  <summary>
+  <span class="tag-label">
+    <span class="tag-title">{{ tag[0] }}</span>
+    <span class="tag-count">{{ tag[1].size }}</span>
+  </span>
+</summary>
 
       <ul class="list-group">
         {% for post in posts %}
