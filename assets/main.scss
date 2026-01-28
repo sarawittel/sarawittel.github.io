@@ -209,6 +209,14 @@ code {
   color: #8e8e93;
 }
 
+.list-group a,
+.list-group a:hover,
+.list-group a:focus,
+.list-group a:active {
+  color: #1d1d1f;
+  text-decoration: none;
+  border-bottom: none;
+}
 /* =========================================================
    7. ABOUT / CONTACT SECTIONS
    ========================================================= */
@@ -235,6 +243,9 @@ code {
    ========================================================= */
 
 @media (prefers-color-scheme: dark) {
+   .site-title a {
+    color: #ffffff;
+  }
   body {
     background-color: #1c1c1e;
     color: #f5f5f7;
@@ -275,6 +286,11 @@ code {
 
   .list-group-item::after {
     color: #636366;
+  }
+
+  .list-group a,
+  .list-group a:hover {
+    color: #ffffff;
   }
 
   .post-content section {
@@ -320,4 +336,19 @@ code {
    .list-group-item::after {
     display: none;
   }
+}
+
+/* =========================================================
+   Header title color override
+   ========================================================= */
+
+.site-title a,
+.site-title a:hover,
+.site-title a:focus {
+  color: #1d1d1f;
+  text-decoration: none;
+}
+
+.site-header .wrapper {
+  max-width: 1040px;
 }
