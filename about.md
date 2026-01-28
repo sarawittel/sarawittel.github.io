@@ -12,10 +12,9 @@ I currently work at **adidas**, where I act as a **Core Leader** for the SAP Bus
 
 This blog is where I write about technology, architecture decisions, and practical lessons learned from real projects.
 
+---
 
 ## What I do
-
-<section>
 
 My work sits at the intersection of **architecture, development, and platform strategy**.
 
@@ -27,7 +26,7 @@ On a daily basis, I:
 
 I enjoy working close to both **technology and delivery**, ensuring that solutions are not only technically sound but also usable and maintainable.
 
-</section>
+---
 
 ## Background
 
