@@ -6,17 +6,18 @@ title: Home
 <section class="home">
   <h2>Last articles</h2>
 
-  <ul class="list-group">
-    {% for post in site.posts %}
-      <li class="list-group-item">
-        <a href="{{ post.url | relative_url }}" class="list-group-title">
-          {{ post.title }}
-        </a>
+  {% assign items = site.posts | map: "url" %}
+  {% assign list_items = "" | split: "" %}
 
-        <span class="list-group-meta">
-          {{ post.date | date: "%B %d, %Y" }}
-        </span>
-      </li>
-    {% endfor %}
-  </ul>
+  {% for post in site.posts %}
+    {% assign list_items = list_items | push: 
+      {
+        "title": post.title,
+        "url": post.url,
+        "meta": post.date | date: "%B %d, %Y"
+      }
+    %}
+  {% endfor %}
+
+  {% include list-group.html items=list_items %}
 </section>

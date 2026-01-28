@@ -7,21 +7,18 @@ permalink: /tags/
 <section class="tags">
   <h2>Tags</h2>
 
-  <ul class="list-group">
-    {% assign sorted_tags = site.tags | sort %}
-    {% for tag in sorted_tags %}
-      <li class="list-group-item">
-        <a
-          href="{{ '/tags/' | append: tag[0] | relative_url }}"
-          class="list-group-title"
-        >
-          {{ tag[0] }}
-        </a>
+  {% assign sorted_tags = site.tags | sort %}
+  {% assign list_items = "" | split: "" %}
 
-        <span class="list-group-meta">
-          {{ tag[1].size }} posts
-        </span>
-      </li>
-    {% endfor %}
-  </ul>
+  {% for tag in sorted_tags %}
+    {% assign list_items = list_items | push:
+      {
+        "title": tag[0],
+        "url": "/tags/" | append: tag[0],
+        "meta": tag[1].size | append: " posts"
+      }
+    %}
+  {% endfor %}
+
+  {% include list-group.html items=list_items %}
 </section>
