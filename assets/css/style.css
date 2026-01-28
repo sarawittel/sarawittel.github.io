@@ -44,9 +44,16 @@ a:hover {
 }
 
 /* Posts */
-article h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+article {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+}
+
+article h1,
+article h2,
+article h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
 }
 
 .meta {
@@ -56,7 +63,17 @@ article h1 {
 }
 
 article p {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+
+article h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+article ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 
 /* Listado de posts */
