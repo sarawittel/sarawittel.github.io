@@ -356,6 +356,10 @@ code {
    .list-group-item::after {
     display: none;
   }
+
+    .tag-group {
+    margin-bottom: 1.6rem;
+  }
 }
 
 /* =========================================================
@@ -386,6 +390,7 @@ code {
   font-weight: 500;
   user-select: none;
   margin-bottom: 1.5rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
 
 /* remove default marker */
@@ -410,6 +415,7 @@ code {
 @media (prefers-color-scheme: dark) {
   .tag-group summary {
     background: #2c2c2e;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04);
   }
 
   .tag-group summary:hover {
@@ -448,6 +454,7 @@ code {
 
 .tag-group {
   overflow: hidden;
+  margin-bottom: 1.4rem;
 }
 
 /* Wrap list for animation */
