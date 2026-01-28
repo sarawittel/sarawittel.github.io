@@ -479,25 +479,6 @@ code {
 }
 
 /* =========================================================
-   Page transition (iOS-style fade)
-   ========================================================= */
-
-.page-content {
-  animation: pageFadeIn 0.25s ease-out;
-}
-
-@keyframes pageFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-
-/* =========================================================
    Page transition (real, visible)
    ========================================================= */
 
@@ -516,22 +497,10 @@ code {
   }
 }
 
-/* =========================================================
-   Page transition (real, visible)
-   ========================================================= */
-
-.page-content .wrapper {
-  animation: pageFadeIn 0.3s ease-out;
-}
-
-@keyframes pageFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .page-content .wrapper {
+    animation: none;
   }
 }
 
@@ -545,9 +514,6 @@ a:focus,
 a:active {
   text-decoration: none !important;
   border-bottom: none !important;
-}
-
-a {
   color: inherit;
 }
 
