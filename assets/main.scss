@@ -123,18 +123,18 @@ blockquote {
 .post-list > li {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 14px;
-  padding: 1.4rem 1.6rem;
-  margin-bottom: 1.4rem;
+  border-radius: 12px;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 0.6rem;
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
 }
 
 .post-list > li:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .post-list h3 {
@@ -142,16 +142,14 @@ blockquote {
 }
 
 .post-list .post-link {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
-  color: #1d1d1f;
+  line-height: 1.4;
 }
 
 .post-list .post-meta {
-  color: #6e6e73;
-  font-size: 0.85rem;
-  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
 }
 
 /* =========================================================
@@ -220,6 +218,7 @@ a:active {
   .post-list > li {
     background: #2c2c2e;
     border-color: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
   }
 
   .post-list .post-link {
