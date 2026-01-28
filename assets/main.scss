@@ -375,52 +375,45 @@ a:hover {
 }
 
 /* =========================================================
-   12. MOBILE
+   Mobile header fix (prevent overlap)
    ========================================================= */
 
-@media (max-width: 600px) and (prefers-color-scheme: dark) {
-  .site-nav {
-    background: #2c2c2e;
-  }
-
-  .site-nav .page-link {
-    color: #f5f5f7;
-  }
-
-  .site-nav .page-link.active {
-    background: #3a3a3c;
-    box-shadow: none;
-  }
-}
-
 @media (max-width: 600px) {
-  .site-nav {
+  .site-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .site-header-inner {
     display: flex;
-    gap: 0.4rem;
-    padding: 0.35rem;
-    background: #f2f2f7;
-    border-radius: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
   }
 
-  .site-nav .page-link {
-    padding: 0.35rem 0.75rem;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #1d1d1f;
-    border-radius: 999px;
-    line-height: 1.4;
-    white-space: nowrap;
+  /* Title row */
+  .site-title {
+    display: flex;
+    align-items: center;
   }
 
-  .site-nav .page-link::after {
-    display: none; /* quitar underline desktop */
+  .site-title-link {
+    gap: 0.6rem;
   }
 
-  .site-nav .page-link.active {
-    background: #ffffff;
-    box-shadow:
-      0 1px 2px rgba(0, 0, 0, 0.08),
-      0 0 0 0.5px rgba(0, 0, 0, 0.06);
+  .site-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Nav row */
+  .site-nav {
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+
+   .page-content {
+    padding-top: 0.5rem;
   }
 }
 
