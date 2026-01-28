@@ -83,12 +83,15 @@ code {
 }
 
 .site-header .wrapper {
-  max-width: 760px;
+  max-width: 1120px; /* más ancho que el contenido */
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .site-header-inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1.5rem;
 }
 
@@ -260,7 +263,7 @@ code {
     color: #8e8e93;
   }
 
-   .tag-group .list-group-item {
+  .tag-group .list-group-item {
     border-bottom-color: rgba(255, 255, 255, 0.08);
   }
   body {
@@ -366,9 +369,7 @@ code {
   text-decoration: none;
 }
 
-.site-header .wrapper {
-  max-width: 1040px;
-}
+
 
 /* =========================================================
    Tags accordion (iOS-style)
@@ -518,24 +519,36 @@ a:hover {
 }
 
 /* =========================================================
-   Tag inner list — flat iOS rows (no cards)
+   Tags accordion — inner list MUST NOT be cards
    ========================================================= */
 
 .tag-group .list-group {
-  border: none;
-  border-radius: 0;
-  background: transparent;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
 }
 
 .tag-group .list-group-item {
   padding: 0.7rem 0;
+  background: transparent;
+  border-radius: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+/* last item no divider */
 .tag-group .list-group-item:last-child {
   border-bottom: none;
 }
 
+/* remove chevron inside tags */
 .tag-group .list-group-item::after {
-  display: none;
+  display: none !important;
+}
+
+/* no hover card feeling */
+.tag-group .list-group-item:hover,
+.tag-group .list-group-item:active {
+  background: transparent;
+  transform: none;
 }
