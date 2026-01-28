@@ -1,6 +1,8 @@
 title: Sara Moreno · Developer Blog
-description: Personal blog with Jekyll and GitHub Pages
+description: Personal blog about SAP, cloud and architecture
 url: https://sarawittel.github.io
+
+lang: en
 
 markdown: kramdown
 permalink: /blog/:title/
