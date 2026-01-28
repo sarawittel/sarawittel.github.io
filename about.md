@@ -70,11 +70,3 @@ Languages:
 - English (B2)
 
 ---
-
-## Get in touch
-
-You can find me here:
-
-- GitHub: https://github.com/sarawittel  
-- LinkedIn: https://www.linkedin.com/in/sara-m-49862a8b/ 
-- Email: sara.lannisport@gmail.com  
