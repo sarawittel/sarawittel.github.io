@@ -3,7 +3,7 @@ description: Personal blog with Jekyll and GitHub Pages
 url: https://sarawittel.github.io
 
 markdown: kramdown
-permalink: /:categories/:title/
+permalink: /blog/:title/
 
 plugins:
   - jekyll-seo-tag
