@@ -35,8 +35,8 @@ h1, h2, h3, h4 {
 }
 
 .post-content p {
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 0.98rem;
+  line-height: 1.65;
   margin-bottom: 1.6rem;
 }
 
@@ -127,8 +127,13 @@ blockquote {
 
 .site-title a {
   font-weight: 600;
+  color: #1d1d1f;
 }
 
+.site-title a:hover {
+  color: #1d1d1f;
+  opacity: 0.9;
+}
 /* =========================================================
    6. HEADER NAVIGATION (Apple-style)
    ========================================================= */
@@ -197,6 +202,7 @@ blockquote {
 .post-list .post-link {
   color: #1d1d1f;
   transition: opacity 0.15s ease;
+  font-size: 0.95rem;
 }
 
 .post-list .post-link:hover {
@@ -362,6 +368,10 @@ a:hover {
   .post-content > p:first-of-type {
     color: #d1d1d6;
   }
+
+  .site-title a {
+  color: #ffffff;
+}
 }
 
 /* =========================================================
