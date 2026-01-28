@@ -282,6 +282,9 @@ a:hover {
    ========================================================= */
 
 @media (prefers-color-scheme: dark) {
+  .site-avatar {
+    background: #2c2c2e;
+  }
   body {
     background-color: #1c1c1e;
     color: #f5f5f7;
@@ -376,5 +379,30 @@ a:hover {
 
   h1 {
     font-size: 1.9rem;
+  }
+}
+
+/* =========================================================
+   Header avatar (comic / personal branding)
+   ========================================================= */
+
+.site-title-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.site-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .site-avatar {
+    display: none;
   }
 }
