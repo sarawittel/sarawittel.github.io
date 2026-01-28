@@ -235,6 +235,11 @@ a:active {
   }
 }
 
+.post-content section,
+.post-content > ul,
+.post-content > p + ul {
+  background: #2c2c2e;
+}
 /* =========================================================
    MOBILE (iOS spacing)
    ========================================================= */
@@ -339,4 +344,62 @@ a:active {
 .post-meta a {
   margin-right: 0.6rem;
   font-size: 0.85rem;
+}
+
+/* =========================================================
+   iOS-style pages (About / Contact)
+   ========================================================= */
+
+/* Page sections as cards */
+.post-content > h2 {
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.post-content > h2 + p,
+.post-content > h2 + ul {
+  margin-top: 0;
+}
+
+/* Wrap logical sections */
+.post-content > h2,
+.post-content > h3 {
+  scroll-margin-top: 6rem;
+}
+
+/* Soft section container */
+.post-content section,
+.post-content > ul,
+.post-content > p + ul {
+  background: #f5f5f7;
+  padding: 1.6rem 1.8rem;
+  border-radius: 16px;
+  margin: 1.6rem 0;
+}
+
+/* Lists inside cards */
+.post-content ul {
+  padding-left: 1.2rem;
+}
+
+.post-content li {
+  margin-bottom: 0.6rem;
+}
+
+/* Remove hard dividers */
+.post-content hr {
+  display: none;
+}
+
+/* About hero */
+.post-content > p:first-of-type {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: #3a3a3c;
+}
+
+@media (prefers-color-scheme: dark) {
+  .post-content > p:first-of-type {
+    color: #d1d1d6;
+  }
 }
