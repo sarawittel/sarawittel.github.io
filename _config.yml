@@ -1,0 +1,9 @@
+title: Sara Moreno - Developer Blog
+description: Articles about SAP Cloud technology, projects and learning
+url: https://sarawittel.github.io
+
+markdown: kramdown
+permalink: /:categories/:title/
+
+plugins:
+  - jekyll-seo-tag
