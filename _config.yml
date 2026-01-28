@@ -7,3 +7,4 @@ permalink: /blog/:title/
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
