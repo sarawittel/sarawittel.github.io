@@ -318,3 +318,16 @@ a:active {
 .site-title a {
   font-weight: 600;
 }
+
+/* =========================================================
+   Align header with page content width
+   ========================================================= */
+
+.page-content .wrapper {
+  max-width: 760px;
+}
+
+/* Make header feel aligned with content on pages */
+.site-header .wrapper {
+  max-width: 760px;
+}
