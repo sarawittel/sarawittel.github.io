@@ -6,18 +6,16 @@ title: Home
 <section class="home">
   <h2>Last articles</h2>
 
-  <ul class="post-list">
+  <ul class="list-group">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">
+      <li class="list-group-item">
+        <a href="{{ post.url | relative_url }}" class="list-group-title">
+          {{ post.title }}
+        </a>
+
+        <span class="list-group-meta">
           {{ post.date | date: "%B %d, %Y" }}
         </span>
-
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title }}
-          </a>
-        </h3>
       </li>
     {% endfor %}
   </ul>

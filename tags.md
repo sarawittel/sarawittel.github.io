@@ -1,27 +1,27 @@
 ---
-layout: page
+layout: default
 title: Tags
 permalink: /tags/
 ---
 
-{% assign sorted_tags = site.tags | sort %}
+<section class="tags">
+  <h2>Tags</h2>
 
-{% for tag in sorted_tags %}
-### {{ tag[0] }} ({{ tag[1].size }})
-
-<ul class="post-list">
-  {% for post in tag[1] %}
-    <li>
-      <span class="post-meta">
-        {{ post.date | date: "%B %d, %Y" }}
-      </span>
-
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title }}
+  <ul class="list-group">
+    {% assign sorted_tags = site.tags | sort %}
+    {% for tag in sorted_tags %}
+      <li class="list-group-item">
+        <a
+          href="{{ '/tags/' | append: tag[0] | relative_url }}"
+          class="list-group-title"
+        >
+          {{ tag[0] }}
         </a>
-      </h3>
-    </li>
-  {% endfor %}
-</ul>
-{% endfor %}
+
+        <span class="list-group-meta">
+          {{ tag[1].size }} posts
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

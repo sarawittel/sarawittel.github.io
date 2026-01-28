@@ -41,7 +41,7 @@ h1, h2, h3, h4 {
 }
 
 .post-content a {
-  color: #1d1d1f;
+  color: inherit;
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   transition: border-color 0.15s ease, opacity 0.15s ease;
@@ -66,7 +66,6 @@ code {
   padding: 1rem;
   border-radius: 10px;
   overflow-x: auto;
-  margin-bottom: 1.6rem;
 }
 
 .post-content p code {
@@ -76,38 +75,7 @@ code {
 }
 
 /* =========================================================
-   4. VERTICAL RHYTHM
-   ========================================================= */
-
-.post-content h2 {
-  margin-top: 3.5rem;
-  margin-bottom: 1.2rem;
-}
-
-.post-content h3 {
-  margin-top: 2.5rem;
-  margin-bottom: 0.8rem;
-}
-
-.post-content ul,
-.post-content ol {
-  margin-left: 1.25rem;
-  margin-bottom: 1.4rem;
-}
-
-.post-content li {
-  margin-bottom: 0.5rem;
-}
-
-blockquote {
-  border-left: 4px solid #e5e5ea;
-  padding-left: 1.2rem;
-  margin: 2rem 0;
-  color: #6e6e73;
-}
-
-/* =========================================================
-   5. HEADER
+   4. HEADER
    ========================================================= */
 
 .site-header {
@@ -121,21 +89,30 @@ blockquote {
 .site-header-inner {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 1.5rem;
 }
 
-.site-title a {
-  font-weight: 600;
-  color: #1d1d1f;
+.site-title-link {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
 }
 
-.site-title a:hover {
-  color: #1d1d1f;
-  opacity: 0.9;
+.site-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
+
+.site-title span {
+  font-weight: 600;
+}
+
 /* =========================================================
-   6. HEADER NAVIGATION (Apple-style)
+   5. NAVIGATION (desktop underline)
    ========================================================= */
 
 .site-nav {
@@ -157,7 +134,7 @@ blockquote {
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background: #3a3a3c;
+  background: currentColor;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.2s ease;
@@ -173,10 +150,11 @@ blockquote {
 }
 
 /* =========================================================
-   7. POST LIST / CARDS (compact)
+   6. SHARED COMPONENT — iOS GROUPED LIST
+   (Articles + Tags)
    ========================================================= */
 
-.post-list {
+.list-group {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -186,36 +164,31 @@ blockquote {
   overflow: hidden;
 }
 
-.post-list > li {
-  margin: 0;
-  padding: 0.9rem 1rem;
-  background: transparent;
-  border-radius: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: none;
+.list-group-item {
   position: relative;
-  transition: background-color 0.15s ease;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.post-list > li:last-child {
+.list-group-item:last-child {
   border-bottom: none;
 }
 
-/* Content layout */
-.post-list .post-meta {
-  font-size: 0.75rem;
-  color: #8e8e93;
-  margin-bottom: 0.15rem;
+.list-group-item:hover {
+  background: #f2f2f7;
 }
 
-.post-list .post-link {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #1d1d1f;
+.list-group-item:active {
+  background: #e5e5ea;
+}
+.list-group-item a {
+  display: block;
 }
 
-/* Chevron hint (iOS style) */
-.post-list > li::after {
+.list-group-item::after {
   content: "›";
   position: absolute;
   right: 1rem;
@@ -224,79 +197,23 @@ blockquote {
   color: #c7c7cc;
   font-size: 1.2rem;
 }
-.post-list > li:hover {
-  background: #f2f2f7;
-}
 
-.post-list > li:active {
-  background: #e5e5ea;
-}
-
-/* =========================================================
-   8. TAGS (compact)
-   ========================================================= */
-
-.post-meta a {
-  display: inline-block;
-  margin-right: 0.4rem;
-  margin-bottom: 0.3rem;
-  padding: 0.15rem 0.45rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  border-radius: 6px;
-  background: #f0f0f2;
-  color: #3a3a3c;
-}
-
-.post-meta a:hover {
-  background: #e5e5ea;
-}
-
-/* Tag titles on /tags */
-.post-content h3 {
-  margin-top: 2.2rem;
-  margin-bottom: 0.6rem;
-}
-
-.tags-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background: #ffffff;
-  border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-}
-
-.tags-list li {
-  padding: 0.8rem 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.tags-list li:last-child {
-  border-bottom: none;
-}
-
-.tags-list a {
-  font-weight: 500;
+.list-group-title {
+  font-size: 0.95rem;
+  font-weight: 600;
   color: #1d1d1f;
 }
 
-.tags-list .tag-count {
+.list-group-meta {
+  font-size: 0.75rem;
   color: #8e8e93;
-  font-size: 0.8rem;
 }
 
 /* =========================================================
-   9. ABOUT / CONTACT (iOS-style sections)
+   7. ABOUT / CONTACT SECTIONS
    ========================================================= */
 
-.post-content section,
-.post-content > ul,
-.post-content > p + ul {
+.post-content section {
   background: #f5f5f7;
   padding: 1.4rem 1.6rem;
   border-radius: 14px;
@@ -307,7 +224,6 @@ blockquote {
   display: none;
 }
 
-/* Hero paragraph */
 .post-content > p:first-of-type {
   font-size: 1.15rem;
   line-height: 1.75;
@@ -315,40 +231,10 @@ blockquote {
 }
 
 /* =========================================================
-   10. MICRO-INTERACTIONS & ACCESSIBILITY
-   ========================================================= */
-
-a {
-  transition: color 0.15s ease, opacity 0.15s ease;
-}
-
-a:hover {
-  opacity: 0.85;
-}
-
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  border-bottom: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-    animation: none !important;
-  }
-}
-
-/* =========================================================
-   11. DARK MODE (macOS)
+   8. DARK MODE
    ========================================================= */
 
 @media (prefers-color-scheme: dark) {
-  .site-avatar {
-    background: #2c2c2e;
-  }
   body {
     background-color: #1c1c1e;
     color: #f5f5f7;
@@ -356,12 +242,6 @@ a:active {
 
   h1, h2, h3, h4 {
     color: #ffffff;
-  }
-
-  .site-header,
-  .site-footer {
-    background-color: #1c1c1e;
-    border-color: #2c2c2e;
   }
 
   .site-nav .page-link {
@@ -372,101 +252,54 @@ a:active {
     color: #ffffff;
   }
 
-.post-content a {
-  color: #f5f5f7;
-  border-bottom-color: rgba(255, 255, 255, 0.25);
-}
-
-.post-content a:hover {
-  opacity: 0.85;
-  border-bottom-color: rgba(255, 255, 255, 0.45);
-}
-
-  .post-content pre,
-  .post-content p code {
-    background: #2c2c2e;
-  }
-
-  blockquote {
-    border-left-color: #3a3a3c;
-    color: #b0b0b5;
-  }
-
-   .post-list {
+  .list-group {
     background: #1c1c1e;
     border-color: rgba(255, 255, 255, 0.08);
   }
 
-  .post-list > li {
+  .list-group-item {
     border-bottom-color: rgba(255, 255, 255, 0.08);
   }
 
-  .post-list > li:hover {
+  .list-group-item:hover {
     background: #2c2c2e;
   }
 
-  .post-list .post-link {
+  .list-group-title {
     color: #ffffff;
   }
 
-  .post-list .post-meta {
+  .list-group-meta {
     color: #8e8e93;
   }
 
-  .post-list > li::after {
+  .list-group-item::after {
     color: #636366;
   }
 
-  .post-meta a {
-    background: #3a3a3c;
-    color: #d1d1d6;
-  }
-
-  .post-meta a:hover {
-    background: #48484a;
-  }
-
-  .post-content section,
-  .post-content > ul,
-  .post-content > p + ul {
+  .post-content section {
     background: #2c2c2e;
   }
 
   .post-content > p:first-of-type {
     color: #d1d1d6;
   }
-
-  .site-title a {
-  color: #ffffff;
-}
 }
 
 /* =========================================================
-   Mobile header fix (prevent overlap)
+   9. MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
-  .site-header {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
   .site-header-inner {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.75rem;
-  }
-
-  .site-title span {
-    line-height: 1.25;
   }
 
   .site-title-link {
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    gap: 0.4rem;
   }
 
   .site-avatar {
@@ -474,35 +307,17 @@ a:active {
     height: 45px;
   }
 
-  /* Nav row */
   .site-nav {
     width: 100%;
-    margin-top: 0.25rem;
+    justify-content: center;
   }
-
 }
 
 @media (min-width: 601px) {
   .site-title span {
     white-space: nowrap;
   }
-}
-
-/* =========================================================
-   Header avatar (comic / personal branding)
-   ========================================================= */
-
-.site-title-link {
-  display: flex;
-  align-items: center;
-   gap: 0.9rem;
-  text-decoration: none;
-}
-
-.site-avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
+   .list-group-item::after {
+    display: none;
+  }
 }
