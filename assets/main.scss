@@ -263,9 +263,18 @@ code {
     color: #8e8e93;
   }
 
-  .tag-group .list-group-item {
-    border-bottom-color: rgba(255, 255, 255, 0.08);
+.tag-group summary {
+    background: #2c2c2e;
   }
+
+  .tag-group .tag-count {
+    color: #8e8e93;
+  }
+
+  .tag-group .list-group-item {
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+  }
+  
   body {
     background-color: #1c1c1e;
     color: #f5f5f7;
@@ -379,18 +388,23 @@ code {
    Tags accordion (iOS-style)
    ========================================================= */
 
+.tag-group {
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+/* SUMMARY (header) */
 .tag-group summary {
   list-style: none;
   cursor: pointer;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1rem;
   border-radius: 14px;
   background: #f5f5f7;
   font-weight: 500;
   user-select: none;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
 
 /* remove default marker */
@@ -398,18 +412,26 @@ code {
   display: none;
 }
 
-/* Title + counter */
-.tag-title {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+/* Chevron */
+.tag-group summary::after {
+  content: "›";
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
+  margin-left: 0.5rem;
 }
 
-/* Counter: Mail.app style */
-.tag-count {
+/* Open state */
+.tag-group[open] summary::after {
+  transform: rotate(-90deg);
+}
+
+/* Counter */
+.tag-group .tag-count {
   font-size: 0.75rem;
   color: #8e8e93;
+  margin-left: 0.4rem;
 }
+
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
@@ -483,6 +505,22 @@ code {
   transform: rotate(-90deg);
 }
 
+
+/* =========================================================
+   Animated content
+   ========================================================= */
+
+.tag-group > ul {
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.tag-group[open] > ul {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* =========================================================
    Page transition (real, visible)
    ========================================================= */
@@ -527,39 +565,29 @@ a:hover {
 }
 
 /* =========================================================
-   Tags accordion — inner list MUST NOT be cards
+   Inner list — NOT cards
    ========================================================= */
 
 .tag-group .list-group {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  overflow: visible !important;
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 
 .tag-group .list-group-item {
   padding: 0.7rem 0;
   background: transparent;
-  border-radius: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* last item no divider */
 .tag-group .list-group-item:last-child {
   border-bottom: none;
 }
 
-/* remove chevron inside tags */
 .tag-group .list-group-item::after {
-  display: none !important;
+  display: none;
 }
 
-/* no hover card feeling */
-.tag-group .list-group-item:hover,
-.tag-group .list-group-item:active {
-  background: transparent;
-  transform: none;
-}
 
 /* =========================================================
    Mobile header — restore pill nav + avatar
