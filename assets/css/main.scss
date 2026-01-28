@@ -1,0 +1,38 @@
+---
+---
+
+@import "minima";
+
+/* =========================
+   Apple / iOS / macOS style
+   ========================= */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont,
+               "SF Pro Text", "SF Pro Display",
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #1d1d1f;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  max-width: 760px;
+  padding: 0 1.25rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #1d1d1f;
+}
+
+a {
+  color: #007aff;
+}
+
+pre {
+  background: #f5f5f7;
+  padding: 1rem;
+  border-radius: 10px;
+}
