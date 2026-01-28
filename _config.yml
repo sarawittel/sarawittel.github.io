@@ -5,6 +5,8 @@ url: https://sarawittel.github.io
 lang: en
 
 markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
 permalink: /blog/:title/
 
 plugins:
