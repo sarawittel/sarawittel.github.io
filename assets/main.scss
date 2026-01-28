@@ -257,6 +257,7 @@ a:active {
    Apple-style header navigation
    ========================================================= */
 
+/* Limit nav from hugging the edge */
 .site-nav {
   display: flex;
   gap: 1.2rem;
@@ -306,4 +307,14 @@ a:active {
   .site-nav .page-link.active {
     color: #ffffff;
   }
+}
+
+.site-header-inner {
+  justify-content: flex-start;
+  gap: 3rem;
+}
+
+/* Optional: slightly reduce visual weight */
+.site-title a {
+  font-weight: 600;
 }
