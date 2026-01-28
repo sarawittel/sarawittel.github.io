@@ -107,3 +107,51 @@ blockquote {
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
 }
+
+/* =========================
+   Dark Mode (macOS style)
+   ========================= */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1c1c1e;
+    color: #f5f5f7;
+  }
+
+  /* Header & footer */
+  .site-header,
+  .site-footer {
+    background-color: #1c1c1e;
+    border-color: #2c2c2e;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+    color: #ffffff;
+  }
+
+  /* Links */
+  a {
+    color: #0a84ff;
+  }
+
+  /* Meta info */
+  .post-meta {
+    color: #9a9a9e;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    border-left-color: #3a3a3c;
+    color: #b0b0b5;
+  }
+
+  /* Code blocks */
+  pre {
+    background: #2c2c2e;
+  }
+
+  p code {
+    background: #2c2c2e;
+  }
+}
