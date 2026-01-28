@@ -8,7 +8,12 @@ permalink: /tags/
   <h2>Tags</h2>
 
   {% for tag in site.tags %}
-    <h3 id="{{ tag[0] }}">{{ tag[0] }}</h3>
+    <h3 id="{{ tag[0] }}">
+      {{ tag[0] }}
+      <span class="tag-count">
+        {{ tag[1].size }}
+      </span>
+    </h3>
 
     <ul class="list-group">
       {% for post in tag[1] %}

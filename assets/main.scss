@@ -153,6 +153,14 @@ code {
    6. SHARED COMPONENT — iOS GROUPED LIST
    (Articles + Tags)
    ========================================================= */
+/* Mail.app–style tag counter */
+
+.tag-count {
+  margin-left: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #8e8e93;
+}
 
 .list-group {
   list-style: none;
@@ -245,6 +253,9 @@ code {
 @media (prefers-color-scheme: dark) {
    .site-title a {
     color: #ffffff;
+  }
+   .tag-count {
+    color: #8e8e93;
   }
   body {
     background-color: #1c1c1e;
