@@ -3,9 +3,9 @@ layout: default
 title: Blog
 ---
 
-### Últimos artículos
+### Last articles
 
 {% for post in site.posts %}
-- **[{{ post.title }}]({{ site.baseurl }}{{ post.url }})**  
+- **[{{ post.title }}]({{ post.url }})**  
   <small>{{ post.date | date: "%d %B %Y" }}</small>
 {% endfor %}
