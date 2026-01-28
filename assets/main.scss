@@ -191,6 +191,8 @@ code {
 
 .list-group-item:active {
   background: #e5e5ea;
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
 }
 .list-group-item a {
   display: block;
@@ -419,6 +421,17 @@ code {
   .tag-group .tag-count {
     color: #8e8e93;
   }
+
+  .tag-group summary::after {
+  content: "›";
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
+  margin-left: 0.5rem;
+}
+
+.tag-group[open] summary::after {
+  transform: rotate(-90deg);
+}
 }
 
 .tag-group summary::after {
@@ -429,4 +442,67 @@ code {
 
 .tag-group[open] summary::after {
   transform: rotate(-90deg);
+}
+
+/* =========================================================
+   Animated tag accordion (iOS-style)
+   ========================================================= */
+
+.tag-group {
+  overflow: hidden;
+}
+
+/* Wrap list for animation */
+.tag-group > ul {
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Open state */
+.tag-group[open] > ul {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tag-group summary::after {
+  content: "›";
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
+  margin-left: 0.5rem;
+}
+
+.tag-group[open] summary::after {
+  transform: rotate(-90deg);
+}
+
+/* =========================================================
+   Page transition (iOS-style fade)
+   ========================================================= */
+
+.page-content {
+  animation: pageFadeIn 0.25s ease-out;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-content {
+    animation: none;
+  }
+
+  .list-group-item:active {
+    transform: none;
+  }
 }
