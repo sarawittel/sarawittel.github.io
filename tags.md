@@ -4,8 +4,10 @@ title: Tags
 permalink: /tags/
 ---
 
-{% for tag in site.tags %}
-### {{ tag[0] }}
+{% assign sorted_tags = site.tags | sort %}
+
+{% for tag in sorted_tags %}
+### {{ tag[0] }} ({{ tag[1].size }})
 
 <ul class="post-list">
   {% for post in tag[1] %}

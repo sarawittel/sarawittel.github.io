@@ -9,13 +9,14 @@ layout: default
     {{ page.date | date: "%B %d, %Y" }}
   </p>
 
-  {% if page.tags %}
-    <p class="post-meta">
-      {% for tag in page.tags %}
-        <a href="{{ '/tags/#' | append: tag | relative_url }}">#{{ tag }}</a>
-      {% endfor %}
-    </p>
-  {% endif %}
+{% if page.tags %}
+  {% assign sorted_post_tags = page.tags | sort %}
+  <p class="post-meta">
+    {% for tag in sorted_post_tags %}
+      <a href="{{ '/tags/#' | append: tag | relative_url }}">#{{ tag }}</a>
+    {% endfor %}
+  </p>
+{% endif %}
 
   {{ content }}
 </article>
