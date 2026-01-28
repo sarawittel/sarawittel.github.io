@@ -495,14 +495,62 @@ code {
     opacity: 1;
     transform: translateY(0);
   }
+
+
+/* =========================================================
+   Page transition (real, visible)
+   ========================================================= */
+
+.page-content .wrapper {
+  animation: pageFadeIn 0.3s ease-out;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .page-content {
-    animation: none;
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  .list-group-item:active {
-    transform: none;
+/* =========================================================
+   Page transition (real, visible)
+   ========================================================= */
+
+.page-content .wrapper {
+  animation: pageFadeIn 0.3s ease-out;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   Remove underline from ALL links (global override)
+   ========================================================= */
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.85;
 }
