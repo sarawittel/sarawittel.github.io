@@ -9,10 +9,12 @@ permalink: /tags/
 
   {% for tag in site.tags %}
     <details class="tag-group">
-      <summary>
-        <span class="tag-name">{{ tag[0] }}</span>
-        <span class="tag-count">{{ tag[1].size }}</span>
-      </summary>
+  <summary>
+  <span class="tag-title">
+    blog
+    <span class="tag-count">2</span>
+  </span>
+</summary>
 
       <ul class="list-group">
         {% for post in tag[1] %}
