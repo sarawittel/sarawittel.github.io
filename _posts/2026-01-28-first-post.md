@@ -9,3 +9,13 @@ excerpt: "Personal blog release with Jekyll and GitHub Pages."
 This is my first article using **Markdown**, Jekyll and GitHub Pages.
 
 Here you will write all your profesional content.
+
+<pre>
+```java
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello, Jekyll");
+  }
+}
+```
+</pre>
