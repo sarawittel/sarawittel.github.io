@@ -133,3 +133,22 @@ nav a.active {
   font-weight: 600;
   text-decoration: underline;
 }
+
+/* Rouge syntax highlighting */
+.highlight {
+  background: #f6f8fa;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 6px;
+  margin-bottom: 1.6rem;
+}
+
+.highlight pre {
+  margin: 0;
+  background: none;
+}
+
+.highlight code {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.9rem;
+}
