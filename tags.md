@@ -7,17 +7,20 @@ permalink: /tags/
 <section class="tags">
   <h2>Tags</h2>
 
-  {% for tag in site.tags %}
+  {% assign sorted_tags = site.tags | sort %}
+
+  {% for tag in sorted_tags %}
+    {% assign tag_name = tag[0] %}
+    {% assign posts = tag[1] %}
+
     <details class="tag-group">
-  <summary>
-  <span class="tag-title">
-    blog
-    <span class="tag-count">2</span>
-  </span>
-</summary>
+      <summary>
+        <span>{{ tag_name }}</span>
+        <span class="tag-count">{{ posts | size }}</span>
+      </summary>
 
       <ul class="list-group">
-        {% for post in tag[1] %}
+        {% for post in posts %}
           <li class="list-group-item">
             <a href="{{ post.url | relative_url }}" class="list-group-title">
               {{ post.title }}
