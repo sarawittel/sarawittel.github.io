@@ -1,7 +1,15 @@
 <header>
   <h2><a href="/">{{ site.title }}</a></h2>
+
   <nav>
-    <a href="/about/">About</a>
-    <a href="/contact/">Contact</a>
+    <a href="/about/"
+       class="{% if page.url == '/about/' %}active{% endif %}">
+       About
+    </a>
+
+    <a href="/contact/"
+       class="{% if page.url == '/contact/' %}active{% endif %}">
+       Contact
+    </a>
   </nav>
 </header>
