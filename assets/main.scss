@@ -94,6 +94,7 @@ pre {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin: 3.5rem 9rem 2.25rem;
   object-fit: cover;
 }
 
@@ -367,6 +368,9 @@ pre {
 
   .tag-group summary {
     background: #2c2c2e;
+  }
+  .post-meta a {
+    color: #8e8e93;
   }
 }
 
