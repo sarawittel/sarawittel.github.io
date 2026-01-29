@@ -95,6 +95,10 @@ pre {
   text-decoration: none;
 }
 
+.site-title-link a:visited{
+  color: #1d1d1f;
+}
+
 .site-avatar {
   width: 150px;
   height: 150px;
@@ -202,6 +206,17 @@ pre {
 /* =========================================================
    6. TAGS ACCORDION
    ========================================================= */
+
+/* Icon */
+.post-icon {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  background-color: #8e8e93;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5L14 3.5Z'/%3E%3C/svg%3E")
+        no-repeat center / contain;
+}
 
 .tag-group {
   margin-bottom: 0.5rem;
@@ -349,6 +364,10 @@ pre {
    ========================================================= */
 
 @media (prefers-color-scheme: dark) {
+   .post-icon {
+    background-color: #8e8e93;
+  }
+  
   .pagination {
     color: #8e8e93;
   }
@@ -444,4 +463,8 @@ pre {
 
 .pagination-info {
   font-size: 0.8rem;
+}
+
+a:hover {
+  text-decoration: none;
 }
