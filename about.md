@@ -4,20 +4,19 @@ title: About
 permalink: /about/
 ---
 
-<section>
 ## Hi, I’m Sara Moreno 👋
 
+<section>
 I’m a **SAP Cloud Architect and senior software professional** with a strong focus on building scalable, well-designed platforms and enabling teams to work better with them.
 
 I currently work at **adidas**, where I act as a **Core Leader** for the SAP Business Technology Platform, helping define the future of the platform while delivering real business value.
 
 This blog is where I write about technology, architecture decisions, and practical lessons learned from real projects.
-
 </section>
 
-<section>
 ## What I do
 
+<section>
 My work sits at the intersection of **architecture, development, and platform strategy**.
 
 On a daily basis, I:
@@ -27,13 +26,11 @@ On a daily basis, I:
 - lead innovation initiatives using SAP BTP and cloud-native tools
 
 I enjoy working close to both **technology and delivery**, ensuring that solutions are not only technically sound but also usable and maintainable.
-
 </section>
-
-<section>
 
 ## Background
 
+<section>
 I have more than **10 years of experience** working with SAP ecosystems and enterprise platforms.
 
 Before joining adidas, I spent **8 years at NTT Data**, where I worked as a senior consultant, developer, and team lead across multiple large-scale projects.
@@ -45,13 +42,13 @@ Some highlights:
 - Early adoption and internal enablement of **SAP CAP** and **Cloud Foundry**
 
 These experiences shaped how I approach software today: with a strong emphasis on **architecture, quality, and long-term sustainability**.
-
 </section>
 
-<section>
+
 
 ## How I think about work
 
+<section>
 I care deeply about **doing things properly**.
 
 I’m methodical, pragmatic, and comfortable making decisions when needed. I like taking ownership of projects and helping teams move forward with clarity and confidence.
@@ -60,13 +57,11 @@ This blog reflects that mindset:
 - clear explanations over buzzwords
 - practical examples over theory
 - documenting things I wish I had found explained clearly before
-
 </section>
-
-<section>
 
 ## Skills & focus areas
 
+<section>
 - SAP BTP & Cloud Architecture  
 - Full-stack development (SAPUI5, SAP CAP, OData, ABAP)  
 - Integrations & event-driven architectures  
@@ -76,5 +71,4 @@ This blog reflects that mindset:
 Languages:
 - Spanish (native)
 - English (B2)
-
 </section>
