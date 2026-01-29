@@ -346,10 +346,12 @@ pre {
     }
   }
 
-  .list-group a {
+  .list-group a{
     color: #d1d1d6; /* iOS secondary label */
   }
-
+  .list-group-title a:visited {
+        color: #d1d1d6;
+  }
   .list-group a:hover {
     color: #ffffff;
   }
