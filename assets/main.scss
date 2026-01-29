@@ -162,6 +162,18 @@ pre {
   overflow: hidden;
 }
 
+.list-group-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Title takes remaining space */
+.list-group-main {
+  flex: 1;
+  min-width: 0;
+}
+
 .list-group-link {
    display: block;
   width: 100%;
@@ -194,8 +206,20 @@ pre {
   }
 }
 
+/* Date on the right */
+.list-group-date {
+  font-size: 0.75rem;
+  color: #8e8e93;
+  white-space: nowrap;
+  margin-right: 1.25rem; /* espacio antes de la flecha */
+}
+
 .list-group-title {
+  font-size: 0.95rem;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .list-group-meta {
@@ -364,6 +388,9 @@ pre {
    ========================================================= */
 
 @media (prefers-color-scheme: dark) {
+  .list-group-date {
+    color: #8e8e93;
+  }
    .post-icon {
     background-color: #8e8e93;
   }
