@@ -24,12 +24,12 @@ permalink: /tags/
       <ul class="list-group">
         {% for post in posts %}
           <li class="list-group-item">
-            <a href="{{ post.url | relative_url }}" class="list-group-title">
+            <a href="{{ post.url | relative_url }}" class="list-group-link">
               {{ post.title }}
-            </a>
             <span class="list-group-meta">
               {{ post.date | date: "%B %d, %Y" }}
             </span>
+            </a>
           </li>
         {% endfor %}
       </ul>
