@@ -346,6 +346,9 @@ pre {
    ========================================================= */
 
 @media (prefers-color-scheme: dark) {
+  .pagination {
+    color: #8e8e93;
+  }
 
   body {
     background: #1c1c1e;
@@ -416,4 +419,26 @@ pre {
   color: inherit;
   text-decoration: none !important;
   border-bottom: none !important;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.8rem;
+  font-size: 0.85rem;
+  color: #8e8e93;
+}
+
+.pagination-link {
+  font-weight: 500;
+  color: inherit;
+}
+
+.pagination-link:hover {
+  opacity: 0.7;
+}
+
+.pagination-info {
+  font-size: 0.8rem;
 }
