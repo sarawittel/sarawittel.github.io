@@ -23,23 +23,14 @@ permalink: /tags/
 
       <ul class="list-group">
         {% for post in posts %}
-         <li class="list-group-item">
-      <a href="{{ post.url | relative_url }}" class="list-group-link">
-        <div class="list-group-row">
-          <span class="post-icon" aria-hidden="true"></span>
-
-          <div class="list-group-main">
-        <div class="list-group-title">
-          {{ post.title }}
-        </div>
-      </div>
-
-      <div class="list-group-date">
-        {{ post.date | date: "%b %d, %Y" }}
-      </div>
-    </div>
-      </a>
-    </li>
+          <li class="list-group-item">
+            <a href="{{ post.url | relative_url }}" class="list-group-link">
+              {{ post.title }}
+            <span class="list-group-meta">
+              {{ post.date | date: "%B %d, %Y" }}
+            </span>
+            </a>
+          </li>
         {% endfor %}
       </ul>
     </details>
