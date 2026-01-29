@@ -586,45 +586,46 @@ a:hover {
 
 
 /* =========================================================
-   Mobile header — restore pill nav + avatar
+   MOBILE HEADER — final & stable
    ========================================================= */
 
 @media (max-width: 600px) {
-  /* Avatar: visible y primero */
-  .site-avatar {
-    width: 72px;
-    height: 72px;
-    margin-top: 0.25rem;
-    order: 1;
+
+  .site-header {
+    padding: 0.75rem 0;
   }
 
-  /* Title debajo del avatar */
-  .site-title-link {
-    order: 2;
+  .site-header .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .site-header-inner {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    gap: 0.6rem;
   }
 
-  .site-title span {
-    font-size: 1.35rem;
-    line-height: 1.25;
-  }
-
-  /* NAV pill VA DESPUÉS */
+  /* NAV — pill style (TOP) */
   .site-nav {
-    order: 3;
+    order: 1;
     width: 100%;
-    justify-content: center;
-    margin-top: 0.5rem;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
     background: #f2f2f7;
     padding: 0.35rem;
     border-radius: 14px;
-    gap: 0;
+    overflow-x: auto; /* 🔑 evita corte */
+    -webkit-overflow-scrolling: touch;
   }
 
   .site-nav .page-link {
-    padding: 0.45rem 0.9rem;
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0.45rem 0.6rem;
     border-radius: 10px;
     font-size: 0.9rem;
   }
@@ -634,12 +635,36 @@ a:hover {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
   }
 
-  /* Quitar subrayados/animaciones en móvil */
   .site-nav .page-link::after {
     display: none;
   }
+
+  /* AVATAR — middle */
+  .site-avatar {
+    order: 2;
+    width: 72px;
+    height: 72px;
+    margin-top: 0.25rem;
+  }
+
+  /* TITLE — bottom */
+  .site-title-link {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.15rem;
+  }
+
+  .site-title span {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    display: block;
+  }
 }
 
+/* Dark mode */
 @media (max-width: 600px) and (prefers-color-scheme: dark) {
   .site-nav {
     background: #2c2c2e;
@@ -647,5 +672,17 @@ a:hover {
 
   .site-nav .page-link.active {
     background: #3a3a3c;
+  }
+}
+
+/* =========================================================
+   Dark mode — fix site title visibility
+   ========================================================= */
+
+@media (prefers-color-scheme: dark) {
+  .site-title a,
+  .site-title a:hover,
+  .site-title a:focus {
+    color: #ffffff;
   }
 }
