@@ -9,10 +9,9 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-permalink: /blog/:title/
 
 paginate: 10
-paginate_path: "/page/:num/"
+paginate_path: "/blog/page/:num/"
 
 plugins:
   - jekyll-seo-tag
