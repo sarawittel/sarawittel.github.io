@@ -7,7 +7,7 @@ title: Home
   <h2>Latest</h2>
 
   <ul class="list-group">
-    {% for post in site.posts limit:3 %}
+    {% for post in site.posts limit:10 %}
       <li class="list-group-item">
         <a href="{{ post.url | relative_url }}">
           {{ post.title }}
