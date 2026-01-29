@@ -256,59 +256,69 @@ pre {
 
   .site-header {
     padding: 0.75rem 0;
-
-    .wrapper {
-      padding: 0 1rem;
-    }
   }
 
+   .site-header .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* 🔑 NO flex aquí */
   .site-header-inner {
-    flex-direction: column;
-    gap: 0.6rem;
+    display: block;
+    text-align: center;
   }
 
-  /* NAV */
+  /* NAV — pill (TOP, full width) */
   .site-nav {
-    order: 1;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
     background: #f2f2f7;
     padding: 0.35rem;
     border-radius: 14px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    margin-bottom: 0.75rem;
 
-    .page-link {
-      flex: 1;
-      text-align: center;
-      white-space: nowrap;
-      padding: 0.45rem 0.6rem;
-      border-radius: 10px;
+    /* Safari-safe */
+    overflow: hidden;
+  }
 
-      &::after { display: none; }
+  .site-nav .page-link {
+    flex: 1;
+    text-align: center;
+    padding: 0.45rem 0.6rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
 
-      &.active {
-        background: #ffffff;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.06);
-      }
-    }
+  .site-nav .page-link.active {
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  .site-nav .page-link::after {
+    display: none;
   }
 
   /* AVATAR */
   .site-avatar {
-    order: 2;
+    display: block;
+    margin: 0.5rem auto 0.25rem;
     width: 72px;
     height: 72px;
   }
 
   /* TITLE */
   .site-title-link {
-    order: 3;
-    flex-direction: column;
-    text-align: center;
+    display: block;
+    margin-top: 0.25rem;
   }
 
   .site-title span {
+    display: block;
     font-size: 1.35rem;
+    line-height: 1.25;
   }
 }
 
@@ -336,6 +346,14 @@ pre {
     }
   }
 
+  .list-group a {
+    color: #d1d1d6; /* iOS secondary label */
+  }
+
+  .list-group a:hover {
+    color: #ffffff;
+  }
+
   .list-group {
     background: #1c1c1e;
     border-color: rgba(255,255,255,0.08);
@@ -358,4 +376,16 @@ pre {
       background: #3a3a3c;
     }
   }
+}
+
+/* =========================================================
+   Fix: links color inside list groups (dark + light)
+   ========================================================= */
+
+.list-group a,
+.list-group a:hover,
+.list-group a:focus,
+.list-group a:active {
+  color: inherit;
+  text-decoration: none;
 }
