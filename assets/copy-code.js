@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = document.createElement("button");
     button.className = "copy-btn";
     button.type = "button";
-    button.innerText = "Copy";
+    button.innerHTML = "⧉";
 
     button.addEventListener("click", () => {
       navigator.clipboard.writeText(code.innerText).then(() => {
-        button.innerText = "Copied!";
+        button.innerHTML = "✓";
         setTimeout(() => {
           button.innerText = "Copy";
         }, 2000);
