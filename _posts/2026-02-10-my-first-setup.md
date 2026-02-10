@@ -3,7 +3,7 @@ layout: post
 title: "My first setup"
 date: 2026-02-10
 categories: macos
-excerpt: "What is my first setup when I have to configure a new laptop"
+excerpt: "What my first setup looks like when I configure a new laptop."
 tags: [macos, blog, vscode, homebrew]
 ---
 
@@ -159,3 +159,5 @@ ZSH_THEME="cloud"
 ```
 
 You can check all themes [here](https://github.com/ohmyzsh/ohmyzsh/wiki/themes).
+
+This is not a perfect setup — it’s simply the one that has proven to work best for me. I hope you can find it useful!
