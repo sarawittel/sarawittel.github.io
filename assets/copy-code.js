@@ -10,10 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     button.addEventListener("click", () => {
       navigator.clipboard.writeText(code.innerText).then(() => {
-        button.innerText = "Copied!";
+        const originalText = button.innerText;
+        button.innerText = "Copied";
+
         setTimeout(() => {
-          button.innerText = "Copy";
-        }, 2000);
+          button.innerText = originalText;
+        }, 1500);
       });
     });
 

@@ -495,25 +495,32 @@ a:hover {
 
 .copy-btn {
   position: absolute;
-  top: 12px;
-  right: 14px;
+  top: 10px;
+  right: 12px;
 
   padding: 4px 10px;
   font-size: 12px;
   font-weight: 500;
 
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.04);
   color: #1c1c1e;
 
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 999px;
 
   cursor: pointer;
-  opacity: 0.85;
+  opacity: 0;
+  transition:
+    opacity 0.15s ease,
+    background 0.15s ease;
+}
+
+pre:hover .copy-btn {
+  opacity: 1;
 }
 
 .copy-btn:hover {
   background: rgba(0, 0, 0, 0.08);
-  opacity: 1;
 }
 
 .copy-btn:active {
@@ -542,11 +549,10 @@ pre code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 13px;
   line-height: 1.65;
+  padding: 1.6rem 1.8rem;
 }
 
 .highlighter-rouge .highlight {
   background: #f5f5f7;
-  padding: 1.6rem 1.8rem;
   border-radius: 16px;
-  margin: 1.6rem 0;
 }
