@@ -3,9 +3,9 @@ layout: post
 title: "The Moment I Stopped Feeling Like a Backend Dinosaur"
 discussion_number: 2
 date: 2026-02-11
-categories: macos
-excerpt: "For the first time in my career, I wondered whether I was becoming a dinosaur — a backend engineer in a world that was shifting faster than my mental model of it."
-tags: [blog, IA]
+categories: [Engineering, AI]
+excerpt: "AI did not replace my engineering skills — it accelerated how I learn, integrate, and move across technologies."
+tags: [blog, Artificial Intelligence, Developer Productivity]
 ---
 
 # The Moment I Stopped Feeling Like a Backend Dinosaur
