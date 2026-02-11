@@ -18,7 +18,18 @@ title: Home
           {{ post.date | date: "%B %d, %Y" }}
         </div>
       </a>
+      {% if post.discussion_number %}
+
+  <div class="post-stats"
+       data-number="{{ post.discussion_number }}">
+    <span class="comment-count">–</span> comments
+    ·
+    <span class="reaction-count">–</span> reactions
+  </div>
+{% endif %}
     </li>
-  {% endfor %}
+
+{% endfor %}
+
 </ul>
 </section>

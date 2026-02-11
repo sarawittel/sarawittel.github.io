@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "My first setup"
+discussion_number: 1
 date: 2026-02-10
 categories: macos
 excerpt: "What my first setup looks like when I configure a new laptop."
