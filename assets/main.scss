@@ -573,21 +573,25 @@ pre code {
   align-items: flex-start;
 }
 
-.sidebar {
-  position: sticky;
-  top: 20px;
-  width: 250px;
-  margin-right: 30px;
-  display: none;
+/* Móvil por defecto */
+.layout {
+  display: flex;
+  flex-direction: column;
 }
 
-/* Mostrar solo en pantallas grandes (laptop en adelante) */
+/* Solo laptop */
 @media (min-width: 1024px) {
-  .sidebar {
-    display: block;
+  .layout {
+    flex-direction: row;
+    align-items: flex-start;
   }
-}
 
-.content {
-  flex: 1;
+  .sidebar {
+    width: 260px;
+    margin-right: 40px;
+  }
+
+  .page-content {
+    flex: 1;
+  }
 }

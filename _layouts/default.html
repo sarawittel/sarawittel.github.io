@@ -6,6 +6,7 @@
   <body>
 
     {% include header.html %}
+      <div class="layout"></div>
  <aside class="sidebar">
     {% include sidebar.html %}
   </aside>
@@ -14,7 +15,7 @@
         {{ content }}
       </div>
     </main>
-
+  </div>
     {% include footer.html %}
 
     <script src="{{ '/assets/tags-accordion.js' | relative_url }}"></script>
