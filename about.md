@@ -14,7 +14,6 @@ This blog is where I write about technology, architecture decisions, and practic
 
 ## What I do
 
-<section>
 My work sits at the intersection of **architecture, development, and platform strategy**.
 
 On a daily basis, I:
@@ -26,11 +25,8 @@ On a daily basis, I:
 
 I enjoy working close to both **technology and delivery**, ensuring that solutions are not only technically sound but also usable and maintainable.
 
-</section>
-
 ## Background
 
-<section>
 I have more than **10 years of experience** working with SAP ecosystems and enterprise platforms.
 
 Before joining adidas, I spent **8 years at NTT Data**, where I worked as a senior consultant, developer, and team lead across multiple large-scale projects.
@@ -44,11 +40,8 @@ Some highlights:
 
 These experiences shaped how I approach software today: with a strong emphasis on **architecture, quality, and long-term sustainability**.
 
-</section>
-
 ## How I think about work
 
-<section>
 I care deeply about **doing things properly**.
 
 I’m methodical, pragmatic, and comfortable making decisions when needed. I like taking ownership of projects and helping teams move forward with clarity and confidence.
@@ -58,19 +51,16 @@ This blog reflects that mindset:
 - clear explanations over buzzwords
 - practical examples over theory
 - documenting things I wish I had found explained clearly before
-</section>
 
 ## Skills & focus areas
 
-<section>
-- SAP BTP & Cloud Architecture  
-- Full-stack development (SAPUI5, SAP CAP, OData, ABAP)  
-- Integrations & event-driven architectures  
-- CI/CD and platform enablement  
+- SAP BTP & Cloud Architecture
+- Full-stack development (SAPUI5, SAP CAP, OData, ABAP)
+- Integrations & event-driven architectures
+- CI/CD and platform enablement
 - Cloud platforms and hybrid landscapes
 
 Languages:
 
 - Spanish (native)
 - English (B2)
-</section>
