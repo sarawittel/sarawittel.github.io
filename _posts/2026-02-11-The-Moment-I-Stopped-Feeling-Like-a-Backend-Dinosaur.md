@@ -8,8 +8,6 @@ excerpt: "AI did not replace my engineering skills — it accelerated how I lear
 tags: [blog, Artificial Intelligence, Developer Productivity]
 ---
 
-# The Moment I Stopped Feeling Like a Backend Dinosaur
-
 I have always considered myself someone who enjoys innovation.
 
 New technologies never intimidated me. I have spent years working comfortably in backend systems, structured environments, and enterprise logic — the kind of engineering where determinism matters and where understanding what happens under the hood is not optional. I value robustness. I value clarity. I value control.
