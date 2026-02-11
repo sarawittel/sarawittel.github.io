@@ -572,26 +572,3 @@ pre code {
   display: flex;
   align-items: flex-start;
 }
-
-/* Móvil por defecto */
-.layout {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Solo laptop */
-@media (min-width: 1024px) {
-  .layout {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .sidebar {
-    width: 260px;
-    margin-right: 40px;
-  }
-
-  .page-content {
-    flex: 1;
-  }
-}
