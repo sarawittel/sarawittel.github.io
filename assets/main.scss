@@ -578,6 +578,14 @@ pre code {
   top: 20px;
   width: 250px;
   margin-right: 30px;
+  display: none;
+}
+
+/* Mostrar solo en pantallas grandes (laptop en adelante) */
+@media (min-width: 1024px) {
+  .sidebar {
+    display: block;
+  }
 }
 
 .content {
