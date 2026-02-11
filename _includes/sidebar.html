@@ -1,21 +1,4 @@
-<h3>Tags</h3>
-<ul>
-  {% for tag in site.tags %}
-  <li>
-    <a href="/tag/{{ tag[0] }}"> {{ tag[0] }} ({{ tag[1].size }}) </a>
-  </li>
-  {% endfor %}
-</ul>
-
-<h3>Archivo</h3>
-<ul>
-  {% assign postsByMonth = site.posts | group_by_exp:"post", "post.date | date:
-  '%Y-%m'" %} {% for month in postsByMonth %}
-  <li>{{ month.name }} ({{ month.items.size }})</li>
-  {% endfor %}
-</ul>
-
-<h3>Más populares</h3>
+<h3>🔥 Most popular</h3>
 <ul>
   {% assign sorted = site.posts | sort: "likes" | reverse %} {% for post in
   sorted limit:5 %}
