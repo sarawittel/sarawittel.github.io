@@ -14,7 +14,7 @@ tags: [SAML, Authentication, Authorization, SAPBTP, CloudSecurity]
 
 ## Architecture & Flow overview
 
-![Architecture_flow_overview](../assets/images/authorization_1.png)
+![Architecture_flow_overview]({{ site.baseurl }}/assets/images/authorization_1.png)
 
 # Cloud Identity Service
 
@@ -45,7 +45,7 @@ tags: [SAML, Authentication, Authorization, SAPBTP, CloudSecurity]
 
 - Let's explore a little bit what we have in the SAML, do the login again but with **SAML** extension opened.
 - In the SAML you should see some entries with SAML label, look for this kind of summary
-  ![Arquitectura SAML](../assets/images/SCR-20260213-rrce.png)
+  ![Arquitectura SAML]({{ site.baseurl }}/assets/images/SCR-20260213-rrce.png)
 - At this point it's important is the **subject** that is the ID (in our cause the email) what we have configured for users and it is what IAS is receiving.
 
 # Custom IDP (Auth0)
@@ -69,7 +69,7 @@ tags: [SAML, Authentication, Authorization, SAPBTP, CloudSecurity]
   ````
 
 - And deploy (remember to add the box script to trigger)
-  ![triggerAuth0](../assets/images/Screenshot%202026-02-14%20at%2012.37.52.png)
+  ![triggerAuth0]({{ site.baseurl }}/assets/images/Screenshot%202026-02-14%20at%2012.37.52.png)
 - Open **SAML Tracer** and relogin (remember to clean cache always in this kind of testing).
 - In **SAML 2.0 section** `AttributeStatemment` we can see that field `roles` has appear and there is the role we have assigned to the user `Developer`.
 
@@ -77,7 +77,7 @@ tags: [SAML, Authentication, Authorization, SAPBTP, CloudSecurity]
 
 - In IAS let's go to `Applications & Resources → Select app subaccount → Attributes`, here you will find the attribute `groups`, add another with `Corporate Identity Provider` and the name of the attribute we are receiving from SAML `roles`, with this we are telling IAS that it will receive that attribute and it have to send it to the subaccount in `groups` attribute.
 - Before doing this mapping let's test something, go to `Monitoring & Reporting → Troubleshooting logs`, get the logs and look for the user you just login. Here we would see the login information between **IAS** and the subaccount and the type is **OIDC** (no SAML), at this point we won't see the group attribute yet but after doing the map will appear. Test it by adding the attribute from the previous step and login, after that review this log again. As you can see now we are sending roles as groups from IAS to BTP Subaccount now:
-  ![openidlogin](../assets/images/SCR-20260217-jspi.png)
+  ![openidlogin]({{ site.baseurl }}/assets/images/SCR-20260217-jspi.png)
 - Now we can do the mapping between our subaccount, `Security → Role Collection → Selecciona Business_Application_Studio_Developer`and add under **User Groups** the role from Auth0 (in our case `Developer`) and unassign it from the user. Clean the cache and relogin, you still have access to **Business Application Studio** but your user has no access to it in IAS neither in BTP Subaccount, the authorization is coming from the Auth0 assigment.
 
 With this article we have understood the basics fot authentication and authorizacion with a custom IDP, we have choosen Auth0 as corporate IDP but it could be done with Azure that it's also using SAML 2.0.  
