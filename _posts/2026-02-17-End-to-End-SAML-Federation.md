@@ -12,6 +12,10 @@ tags: [SAML, Authentication, Authorization, SAPBTP, CloudSecurity]
 
 - Install **SAML tracer** (browser extension)
 
+## Architecture & Flow overview
+
+![Architecture_flow_overview](../assets/images/authorization_1.png)
+
 # Cloud Identity Service
 
 - Provision the default service, tenant test
