@@ -71,7 +71,7 @@ Now let's see what we can do with this, first I would like to connect this card 
 
 - Let's put a little bit of formatting, for example add in Item Highlight `{= ${Order_Details/results/0/UnitPrice} < 30 ? 'Success': 'Warning'}`
 
-## Header
+### Header
 
 There are 2 types of header
 
@@ -84,6 +84,57 @@ In Card Header Configuration let's add the following:
 ![ui5_integration_cards]({{ site.baseurl }}/assets/images/Screenshot 2026-03-26 at 17.58.44.png)
 
 ![ui5_integration_cards]({{ site.baseurl }}/assets/images/Screenshot 2026-03-26 at 17.59.42.png)
+
+Now let's play a little bit more and add a side indicator in the header.
+
+![ui5_integration_cards]({{ site.baseurl }}/assets/images/Screenshot 2026-03-26 at 18.14.07.png)
+
+**States should be added by hand** since the editor doesn't allow it:
+
+```json
+{
+  "sideIndicators": [
+    {
+      "title": "Target",
+      "number": 200,
+      "state": "Good",
+      "unit": "Orders"
+    },
+    {
+      "title": "Deviation",
+      "number": "{= ${} - 200}",
+      "state": "{= ${} < 200 ? 'Good' : 'Critical'}"
+    }
+  ]
+}
+```
+
+Let's go further and add an image in the header, you just need to:
+
+- Create a new forder called `images` and add there the image you want to load
+- In the `manifest.json` add the following:
+
+```json
+{
+  "icon": {
+    "src": "./images/avatar.jpg"
+  }
+}
+```
+
+And voilá
+![ui5_integration_cards]({{ site.baseurl }}/assets/images/Screenshot 2026-03-26 at 18.24.40.png)
+
+### Filtering
+
+#### Search
+
+Let's add some search in the header so we can look for some orders.
+
+- In General Configuration>Add: Filter and add `searchShip` and type `Search`
+- After that you would need to indicate the filter you would use, under Data Configuration (Card)>Data Request Paramters just add the filter key `$filter` and value `substringof('{filters>/searchShip/value}', ShipName) eq true` and that's all you can select in your list by ShipName
+
+![ui5_integration_cards]({{ site.baseurl }}/assets/images/Screenshot 2026-03-26 at 19.02.47.png)
 
 ## 🧠 Final thoughts
 
