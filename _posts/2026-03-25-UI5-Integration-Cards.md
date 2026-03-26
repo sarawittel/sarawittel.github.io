@@ -69,6 +69,22 @@ Now let's see what we can do with this, first I would like to connect this card 
 
 - Then you just need to configure the column by adding Value `{OrderUD}` for example. You can also access to expanded attributes with `{Order_Details/results/0/UnitPrice}`
 
+- Let's put a little bit of formatting, for example add in Item Highlight `{= ${Order_Details/results/0/UnitPrice} < 30 ? 'Success': 'Warning'}`
+
+## Header
+
+There are 2 types of header
+
+- Default header
+- Numeric header, numeric header allows you to add numeric information in the header (like a KPI)
+
+So let's configure a KPI for the header, you just need to go to Data Configuration (Header) and add there the request URL: `{{destinations.Northwind}}/Orders/$count`
+
+In Card Header Configuration let's add the following:
+![ui5_integration_cards]({{ site.baseurl }}/assets/images/Screenshot 2026-03-26 at 17.58.44.png)
+
+![ui5_integration_cards]({{ site.baseurl }}/assets/images/Screenshot 2026-03-26 at 17.59.42.png)
+
 ## 🧠 Final thoughts
 
 I’m not saying I’ve become a frontend person now 😅
